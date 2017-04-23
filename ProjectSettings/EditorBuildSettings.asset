@@ -4,4 +4,40 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Lobby.unity
+    guid: 192b7adf9827856408c9f104dd2a19c1
+  - enabled: 1
+    path: Assets/Scenes/LobbyExitDoor.unity
+    guid: ca82b5da3a0e69640b1ea04fe2554ed5
+  - enabled: 1
+    path: Assets/Scenes/Bathroom.unity
+    guid: d243382407701034585497017ce8cb26
+  - enabled: 1
+    path: Assets/Scenes/Stairs.unity
+    guid: 138b7bb7a9470da44b6da24ff4a7f1bd
+  - enabled: 1
+    path: Assets/Scenes/StairsCompass.unity
+    guid: 11ec908b7a6eee84ba3ab18a6e8ee7de
+  - enabled: 1
+    path: Assets/Scenes/WhiteRoom.unity
+    guid: ef7fbbaf348e9ca49bbaf87da2cd545c
+  - enabled: 1
+    path: Assets/Scenes/Library.unity
+    guid: bf7498ba0a8c13943990f051feb4aa0d
+  - enabled: 1
+    path: Assets/Scenes/LibraryCompass.unity
+    guid: c3585798411db9c4ba690b1447f71b57
+  - enabled: 1
+    path: Assets/Scenes/BlueRoom.unity
+    guid: 5cd04fd404dfdba4aa86414dcfb87088
+  - enabled: 1
+    path: Assets/Scenes/ColumnsRoom.unity
+    guid: b2c4c4b6ac5a7a444b69d10f84733c12
+  - enabled: 1
+    path: Assets/Scenes/ColumnsRoomDetail.unity
+    guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/Scenes/CompassRoom.unity
+    guid: 06f6fab8ebd265a4fac34bc767a67217
