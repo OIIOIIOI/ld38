@@ -8,8 +8,16 @@ public class Trigger : MonoBehaviour
 {
 
     public string hoverText;
-
+    public TargetType targetType;
     public TargetScene targetScene;
+    public string[] dialogueTexts;
+
+    public enum TargetType
+    {
+        Scene,
+        Custom,
+        Dialogue
+    }
 
     public enum TargetScene
     {
@@ -17,48 +25,78 @@ public class Trigger : MonoBehaviour
         Bathroom,
         Stairs, StairsCompass,
         CompassRoom,
-        Chapel, ChapelCircle,
+        Chapel, ChapelDetail,
         WhiteRoom,
         Library, LibraryCompass,
         BlueRoom, BlueRoomCompass,
         ColumnsRoom, ColumnsRoomDetail
     }
 
-    Text cursorText;
+    Text cursorTextUI;
+    Text dialogueTextUI;
 
-	void Start ()
+    protected void Start ()
     {
         GameObject go = GameObject.Find("CursorText");
         if (go)
         {
-            cursorText = go.GetComponent<Text>();
-            cursorText.text = "";
+            cursorTextUI = go.GetComponent<Text>();
+            cursorTextUI.text = "";
         }
-	}
-
-    private void OnMouseEnter ()
-    {
-        if (cursorText)
-            cursorText.text = hoverText;
+        go = GameObject.Find("DialogueText");
+        if (go)
+        {
+            dialogueTextUI = go.GetComponent<Text>();
+            dialogueTextUI.text = "";
+        }
     }
 
-    private void OnMouseOver ()
+    void OnMouseEnter ()
     {
-        if (cursorText)
-            cursorText.gameObject.transform.position = Input.mousePosition;
+        if (cursorTextUI)
+            cursorTextUI.text = hoverText;
     }
 
-    private void OnMouseExit ()
+    void OnMouseOver ()
     {
-        if (cursorText)
-            cursorText.text = "";
+        if (cursorTextUI)
+            cursorTextUI.gameObject.transform.position = Input.mousePosition;
     }
 
-    private void OnMouseDown ()
+    void OnMouseExit ()
     {
-        if (cursorText)
-            cursorText.text = "";
-        SceneManager.LoadScene(targetScene.ToString());
+        if (cursorTextUI)
+            cursorTextUI.text = "";
     }
+
+    void OnMouseDown ()
+    {
+        switch (targetType)
+        {
+            case TargetType.Scene:
+                if (cursorTextUI)
+                    cursorTextUI.text = "";
+                if (dialogueTextUI)
+                    dialogueTextUI.text = "";
+                SceneManager.LoadScene(targetScene.ToString());
+                break;
+
+            case TargetType.Dialogue:
+                if (dialogueTextUI)
+                {
+                    string dt = "";
+                    if (dialogueTexts.Length > 0)
+                        dt = dialogueTexts[Random.Range(0, dialogueTexts.Length)];
+                    dialogueTextUI.text = dt;
+                }
+                break;
+
+            case TargetType.Custom:
+                CustomScript();
+                break;
+        }
+    }
+
+    protected virtual void CustomScript () { }
 
 }

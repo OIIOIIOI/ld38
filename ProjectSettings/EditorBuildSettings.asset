@@ -37,7 +37,13 @@ EditorBuildSettings:
     guid: b2c4c4b6ac5a7a444b69d10f84733c12
   - enabled: 1
     path: Assets/Scenes/ColumnsRoomDetail.unity
-    guid: 00000000000000000000000000000000
+    guid: 3bb25d01563c7e744ae368a9c26ef335
   - enabled: 1
     path: Assets/Scenes/CompassRoom.unity
     guid: 06f6fab8ebd265a4fac34bc767a67217
+  - enabled: 1
+    path: Assets/Scenes/Chapel.unity
+    guid: e84ca44af5549ce47917bfa8ccf5130b
+  - enabled: 1
+    path: Assets/Scenes/ChapelDetail.unity
+    guid: 00000000000000000000000000000000
