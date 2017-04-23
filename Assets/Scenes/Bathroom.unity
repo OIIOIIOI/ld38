@@ -169,6 +169,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   alts:
   - {fileID: 21300000, guid: 81d99fa32a7a7ef4f9808643fd59b0f1, type: 3}
+  swapTarget: {fileID: 1940018802}
 --- !u!212 &125866246
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -231,6 +232,7 @@ GameObject:
   m_Component:
   - component: {fileID: 636700638}
   - component: {fileID: 636700637}
+  - component: {fileID: 636700639}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -263,6 +265,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &636700639
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 636700636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7f5afcc34b0461e4098a77ef4fc82387, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  musicIndex: 1
 --- !u!1 &897963823
 GameObject:
   m_ObjectHideFlags: 0
