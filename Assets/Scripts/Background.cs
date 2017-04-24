@@ -15,7 +15,7 @@ public class Background : MonoBehaviour
         sr = gameObject.GetComponent<SpriteRenderer>();
     }
 
-    public void Swap (int index = 0, float fadeInStep = 0.01f)
+    public void Swap (int index = 0, float fadeInStep = 0.1f)
     {
         StopAllCoroutines();
 
@@ -23,7 +23,7 @@ public class Background : MonoBehaviour
             StartCoroutine(SwapSprite(alts[index], fadeInStep));
     }
 
-    public void Flash (int index = 0, float fadeInStep = 0.05f, float fadeOutStep = 0.05f, float flashTime = 0.1f)
+    public void Flash (int index = 0, float fadeInStep = 0.1f, float fadeOutStep = 0.1f, float flashTime = 0.1f)
     {
         StopAllCoroutines();
 
@@ -36,11 +36,12 @@ public class Background : MonoBehaviour
         sr.color = Color.clear;
         sr.sprite = s;
 
-        for (float f = 0f; f <= 1f; f += 0.1f)
+        for (float f = 0f; f <= 1f; f += fadeInStep)
         {
             sr.color = new Color(1, 1, 1, f);
-            yield return new WaitForSeconds(fadeInStep);
+            yield return new WaitForFixedUpdate();
         }
+        sr.color = new Color(1, 1, 1, 1);
 
         if (swapTarget)
             swapTarget.sprite = s;
@@ -54,24 +55,20 @@ public class Background : MonoBehaviour
         sr.color = Color.clear;
         sr.sprite = s;
 
-        for (float f = 0f; f <= 1f; f += 0.1f)
+        for (float f = 0f; f <= 1f; f += fadeInStep)
         {
-            sr.color = new Color(1, 1, 1, f);
-            if (fadeInStep >= 0f)
-                yield return new WaitForSeconds(fadeInStep);
-            else
-                yield return new WaitForFixedUpdate();
+            sr.color = new Color(1f, 1f, 1f, f);
+            yield return new WaitForFixedUpdate();
         }
+        sr.color = new Color(1, 1, 1, 1);
 
-        yield return new WaitForSeconds(flashTime);
+        if (flashTime > 0f)
+            yield return new WaitForSeconds(flashTime);
 
-        for (float f = 1f; f >= 0; f -= 0.1f)
+        for (float f = 1f; f >= 0f; f -= fadeOutStep)
         {
-            sr.color = new Color(1, 1, 1, f);
-            if (fadeInStep >= 0f)
-                yield return new WaitForSeconds(fadeInStep);
-            else
-                yield return new WaitForFixedUpdate();
+            sr.color = new Color(1f, 1f, 1f, f);
+            yield return new WaitForFixedUpdate();
         }
 
         sr.color = Color.clear;
