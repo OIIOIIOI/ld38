@@ -490,7 +490,7 @@ Prefab:
     - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
         type: 2}
       propertyPath: dialogueTexts.Array.data[0]
-      value: The ground is covered with broken tile and glass.
+      value: Broken tile and glass all over the ground...
       objectReference: {fileID: 0}
     - target: {fileID: 61766191363673744, guid: 7018472ccb52e3d4c970ae7877df3fd6,
         type: 2}

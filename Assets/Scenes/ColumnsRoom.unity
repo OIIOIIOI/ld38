@@ -212,11 +212,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverText: Go on
+  triggerIcon: 0
   targetType: 2
   targetScene: 14
   dialogueTexts:
-  - There are scrathes in some places.
+  - There are scratches in some places.
 --- !u!1 &843046245
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,7 +244,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5afcc34b0461e4098a77ef4fc82387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicIndex: 5
+  roomMusicIndex: 0
 --- !u!4 &843046247
 Transform:
   m_ObjectHideFlags: 0
@@ -386,7 +386,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverText: Go on
+  triggerIcon: 0
   targetType: 0
   targetScene: 14
   dialogueTexts: []
@@ -482,11 +482,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverText: Go on
+  triggerIcon: 0
   targetType: 2
   targetScene: 14
   dialogueTexts:
-  - I can't see outside but I hear rain keeps falling.
+  - I can't see outside but it cannot be uglier than here.
 --- !u!1001 &1662415260
 Prefab:
   m_ObjectHideFlags: 0
@@ -595,7 +595,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverText: Go on
+  triggerIcon: 0
   targetType: 2
   targetScene: 14
   dialogueTexts:

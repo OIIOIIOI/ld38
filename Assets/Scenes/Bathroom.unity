@@ -302,7 +302,7 @@ Prefab:
     - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
         type: 2}
       propertyPath: dialogueTexts.Array.data[1]
-      value: And of course, no water...
+      value: And of course no water...
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58193979629422796, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
