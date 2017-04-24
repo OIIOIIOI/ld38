@@ -138,7 +138,6 @@ Transform:
   - {fileID: 1352744048}
   - {fileID: 2085655197}
   - {fileID: 1335948531}
-  - {fileID: 653417187}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -219,94 +218,6 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 1.37
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 58447899933797640, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
-    - {fileID: 58193979629422796, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
-  m_ParentPrefab: {fileID: 100100000, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
-  m_IsPrefabParent: 0
---- !u!4 &653417187 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6,
-    type: 2}
-  m_PrefabInternal: {fileID: 938368513}
---- !u!1001 &938368513
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 112657302}
-    m_Modifications:
-    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
-        type: 2}
-      propertyPath: dialogueTexts.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
-      propertyPath: m_RootOrder
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1436431799612464, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
-      propertyPath: m_Name
-      value: Door
-      objectReference: {fileID: 0}
-    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
-        type: 2}
-      propertyPath: targetType
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
-        type: 2}
-      propertyPath: dialogueTexts.Array.data[0]
-      value: I expected it to creak. How disapointing!
-      objectReference: {fileID: 0}
-    - target: {fileID: 61766191363673744, guid: 7018472ccb52e3d4c970ae7877df3fd6,
-        type: 2}
-      propertyPath: m_Offset.y
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 61766191363673744, guid: 7018472ccb52e3d4c970ae7877df3fd6,
-        type: 2}
-      propertyPath: m_Offset.x
-      value: -1.71
-      objectReference: {fileID: 0}
-    - target: {fileID: 61766191363673744, guid: 7018472ccb52e3d4c970ae7877df3fd6,
-        type: 2}
-      propertyPath: m_Size.x
-      value: 2.57
-      objectReference: {fileID: 0}
-    - target: {fileID: 61766191363673744, guid: 7018472ccb52e3d4c970ae7877df3fd6,
-        type: 2}
-      propertyPath: m_Size.y
-      value: 2.74
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58447899933797640, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
@@ -519,7 +430,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverText: Go on
+  triggerIcon: 0
   targetType: 0
   targetScene: 13
   dialogueTexts: []
@@ -749,7 +660,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5afcc34b0461e4098a77ef4fc82387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicIndex: 3
+  roomMusicIndex: 0
 --- !u!4 &2051091910
 Transform:
   m_ObjectHideFlags: 0
