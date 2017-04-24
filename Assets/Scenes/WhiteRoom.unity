@@ -261,7 +261,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32b318688d4bcae4ba150a0ee265322b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 7
+  delay: 8
   alts:
   - {fileID: 21300000, guid: 2853839007b58444a8c1fd104586cb15, type: 3}
   - {fileID: 21300000, guid: da3dc04da791b264d9d2dea33afe7180, type: 3}
@@ -333,7 +333,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverText: Go on
+  triggerIcon: 0
   targetType: 0
   targetScene: 9
   dialogueTexts:
