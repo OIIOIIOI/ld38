@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class CompassTrigger : Trigger
 {
-
-    public int startRotation;
+    
+    public int compass;
     public int correctRotation;
 
     bool rotating = false;
+    int rotation;
 
     AudioTracker at;
     Global global;
@@ -23,16 +24,52 @@ public class CompassTrigger : Trigger
     {
         base.Start();
 
-        transform.Rotate(Vector3.forward, -90f * startRotation);
+        rotation = 0;
+        switch (compass)
+        {
+            case 1:
+                rotation = global.compassRotationA;
+                break;
+            case 2:
+                rotation = global.compassRotationB;
+                break;
+            case 3:
+                rotation = global.compassRotationC;
+                break;
+        }
+        transform.Rotate(Vector3.forward, -90f * rotation);
     }
 
     override protected void CustomScript ()
     {
         if (!rotating)
         {
+            rotation += 1;
+            if (rotation >= 4)
+                rotation = 0;
+
+            switch (compass)
+            {
+                case 1:
+                    global.compassRotationA = rotation;
+                    break;
+                case 2:
+                    global.compassRotationB = rotation;
+                    break;
+                case 3:
+                    global.compassRotationC = rotation;
+                    break;
+            }
+
+            Debug.Log("correct: " + (rotation == correctRotation));
+
+            if (rotation == correctRotation)
+                global.ValidateClue("compass" + compass);
+            else
+                global.InvalidateClue("compass" + compass);
+
             rotating = true;
-            //at.PlaySFX(5);
-            at.SoundBoard(0, -1, 5);
+            at.SfxBoard(5);
             StartCoroutine("RotateWheel");
         }
     }

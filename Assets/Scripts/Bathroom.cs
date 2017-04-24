@@ -19,26 +19,23 @@ public class Bathroom : MonoBehaviour
 
     private void Start ()
     {
-        //at.EnterRoom(roomMusicIndex);
-        at.SoundBoard(roomMusicIndex);
-        //Invoke("Lightning", Random.Range(8f, 20f));
-        Invoke("Lightning", 1f);
+        at.RoomBoard(roomMusicIndex);
+        Invoke("Lightning", Random.Range(8f, 20f));
+        //Invoke("Lightning", 1f);
     }
 
     void Lightning ()
     {
         background.Flash(0, 0.3f, 0.15f, 0.05f);
-        global.ValidateClue("bathroom", roomMusicIndex);
+        global.ValidateClue("bathroom");
 
-        Invoke("LightningSFX", Random.Range(0.8f, 1.6f));
+        Invoke("LightningSFX", Random.Range(0.2f, 0.6f));
         Invoke("Lightning", Random.Range(8f, 20f));
-        //Invoke("Lightning", 6f);
     }
 
     void LightningSFX ()
     {
-        //at.PlaySFX(10);
-        at.SoundBoard(0, -1, 10);
+        at.SfxBoard(10);
     }
 
 }
