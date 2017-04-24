@@ -122,7 +122,7 @@ public class AudioTracker : MonoBehaviour {
         SoundBoard(room, puzzle);
     }
 
-	public void SoundBoard (int roomnumberint = 0, int puzzlenumberint = 0, int SFXnumberint = 0)
+	public void SoundBoard (int roomnumberint = 0, int puzzlenumberint = -1, int SFXnumberint = 0)
     {
         //void SoundBoard (){
         Debug.Log("SoundBoard " + roomnumberint + " / " + puzzlenumberint);
@@ -132,48 +132,48 @@ public class AudioTracker : MonoBehaviour {
             weather03.Play();
             SFXnumberint = 0;
         }
-        if (SFXnumberint == 1)
+        else if (SFXnumberint == 1)
         {
             sfx01.Play();
             SFXnumberint = 0;
         }
-        if (SFXnumberint == 2)
+        else if (SFXnumberint == 2)
         {
             sfx01.Stop();
             sfx02.Play();
             SFXnumberint = 0;
         }
-        if (SFXnumberint == 3)
+        else if (SFXnumberint == 3)
         {
             sfx03.Play();
             SFXnumberint = 0;
         }
-        if (SFXnumberint == 4)
+        else if (SFXnumberint == 4)
         {
             sfx04.Play();
             SFXnumberint = 0;
         }
-        if (SFXnumberint == 5)
+        else if (SFXnumberint == 5)
         {
             sfx05.Play();
             SFXnumberint = 0;
         }
-        if (SFXnumberint == 6)
+        else if (SFXnumberint == 6)
         {
             sfx06.Play();
             SFXnumberint = 0;
         }
-        if (SFXnumberint == 7)
+        else if (SFXnumberint == 7)
         {
             sfx07.Play();
             SFXnumberint = 0;
         }
-        if (SFXnumberint == 8)
+        else if (SFXnumberint == 8)
         {
             sfx08.Play();
             SFXnumberint = 0;
         }
-        if (SFXnumberint == 9)
+        else if (SFXnumberint == 9)
         {
             sfx09.Play();
             SFXnumberint = 0;
@@ -194,62 +194,7 @@ public class AudioTracker : MonoBehaviour {
 
 		}
 	}
-
-    public void PlaySFX (int SFXnumberint)
-    {
-
-        if (SFXnumberint == 10)
-        {
-            weather03.Play();
-            SFXnumberint = 0;
-        }
-        if (SFXnumberint == 1)
-        {
-            sfx01.Play();
-            SFXnumberint = 0;
-        }
-        if (SFXnumberint == 2)
-        {
-            sfx01.Stop();
-            sfx02.Play();
-            SFXnumberint = 0;
-        }
-        if (SFXnumberint == 3)
-        {
-            sfx03.Play();
-            SFXnumberint = 0;
-        }
-        if (SFXnumberint == 4)
-        {
-            sfx04.Play();
-            SFXnumberint = 0;
-        }
-        if (SFXnumberint == 5)
-        {
-            sfx05.Play();
-            SFXnumberint = 0;
-        }
-        if (SFXnumberint == 6)
-        {
-            sfx06.Play();
-            SFXnumberint = 0;
-        }
-        if (SFXnumberint == 7)
-        {
-            sfx07.Play();
-            SFXnumberint = 0;
-        }
-        if (SFXnumberint == 8)
-        {
-            sfx08.Play();
-            SFXnumberint = 0;
-        }
-        if (SFXnumberint == 9)
-        {
-            sfx09.Play();
-            SFXnumberint = 0;
-        }
-    }
+    
 
 	/*void OnGUI (){
 
@@ -283,7 +228,7 @@ public class AudioTracker : MonoBehaviour {
 
 		}
 
-		if (room == 1) {
+        else if (room == 1) {
 			
 			AmbiancePlay (Room01); 
 			AmbianceStop (Room02);
@@ -296,7 +241,7 @@ public class AudioTracker : MonoBehaviour {
 
 		}
 
-		if (room == 2) {
+        else if (room == 2) {
 			
 			AmbiancePlay (Room02); 
 			AmbianceStop (Room01);
@@ -308,7 +253,7 @@ public class AudioTracker : MonoBehaviour {
 			AmbianceStop (Room08);
 		
 		}
-		if (room == 3) {
+        else if (room == 3) {
 			
 			AmbiancePlay (Room03); 
 			AmbianceStop (Room02);
@@ -320,7 +265,7 @@ public class AudioTracker : MonoBehaviour {
 			AmbianceStop (Room08);
 
 		}
-		if (room == 4) {
+        else if (room == 4) {
 			
 			AmbiancePlay (Room04); 
 			AmbianceStop (Room02);
@@ -332,7 +277,7 @@ public class AudioTracker : MonoBehaviour {
 			AmbianceStop (Room08);
 
 		}
-		if (room == 5) {
+        else if (room == 5) {
 			
 			AmbiancePlay (Room05); 
 			AmbianceStop (Room02);
@@ -344,7 +289,7 @@ public class AudioTracker : MonoBehaviour {
 			AmbianceStop (Room08);
 
 		}
-		if (room == 6) {
+        else if (room == 6) {
 			
 			AmbiancePlay (Room06); 
 			AmbianceStop (Room02);
@@ -356,7 +301,7 @@ public class AudioTracker : MonoBehaviour {
 			AmbianceStop (Room08);
 
 		}
-		if (room == 7) {
+        else if (room == 7) {
 			
 			AmbiancePlay (Room07); 
 			AmbianceStop (Room02);
@@ -368,7 +313,7 @@ public class AudioTracker : MonoBehaviour {
 			AmbianceStop (Room08);
 
 		}
-		if (room == 8) {
+        else if (room == 8) {
 			
 			AmbiancePlay (Room08); 
 			AmbianceStop (Room02);
@@ -403,7 +348,7 @@ public class AudioTracker : MonoBehaviour {
 			SoundStop (weather02);
 		}
 
-		if (puzzle == 1) {
+        else if (puzzle == 1) {
 			
 			SoundPlay (puzzle01);
 			SoundStop (puzzle02);
@@ -421,7 +366,7 @@ public class AudioTracker : MonoBehaviour {
 
 		}
 
-		if (puzzle == 2) {
+        else if (puzzle == 2) {
 			
 			SoundPlay (puzzle01);
 			SoundPlay (puzzle02);
@@ -433,7 +378,7 @@ public class AudioTracker : MonoBehaviour {
 
 		}
 
-		if (puzzle == 3) {
+        else if (puzzle == 3) {
 			
 			SoundPlay (puzzle01);
 			SoundPlay (puzzle02);
@@ -445,7 +390,7 @@ public class AudioTracker : MonoBehaviour {
 
 		}
 
-		if (puzzle == 4) {
+        else if (puzzle == 4) {
 			
 			SoundPlay (puzzle01);
 			SoundPlay (puzzle02);
@@ -456,7 +401,7 @@ public class AudioTracker : MonoBehaviour {
 			SoundStop (puzzle07);
 
 		}
-		if (puzzle == 5) {
+        else if (puzzle == 5) {
 
 			SoundStop (puzzle01);
 			SoundPlay (puzzle02);
@@ -467,7 +412,7 @@ public class AudioTracker : MonoBehaviour {
 			SoundStop (puzzle07);
 		}
 
-		if (puzzle == 6) {
+        else if (puzzle == 6) {
 			
 			SoundStop (puzzle01);
 			SoundStop (puzzle02);
@@ -479,7 +424,7 @@ public class AudioTracker : MonoBehaviour {
 
 		}
 
-		if (puzzle == 7) {
+        else if (puzzle == 7) {
 			
 			SoundStop (puzzle01);
 			SoundStop (puzzle02);

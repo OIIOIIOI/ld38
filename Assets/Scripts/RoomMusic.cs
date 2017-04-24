@@ -16,7 +16,8 @@ public class RoomMusic : MonoBehaviour
 
     void Start ()
     {
-        at.EnterRoom(roomMusicIndex);
+        //at.EnterRoom(roomMusicIndex);
+        at.SoundBoard(roomMusicIndex);
     }
 
 }

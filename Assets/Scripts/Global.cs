@@ -38,14 +38,15 @@ public class Global : MonoBehaviour
         if (!foundClues.Contains(id))
         {
             foundClues.Add(id);
-            at.EnterRoom(room);
+            //at.EnterRoom(room);
+            Debug.Log(id + " ok, found: " + GetProgress());
+            at.SoundBoard(0, GetProgress());
         }
-        Debug.Log(id + " - " + foundClues.Count);
     }
 
     public int GetProgress ()
     {
-        return foundClues.Count;
+        return foundClues.Count + 1;
     }
 
 }

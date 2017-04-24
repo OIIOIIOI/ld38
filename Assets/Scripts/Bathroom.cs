@@ -19,7 +19,8 @@ public class Bathroom : MonoBehaviour
 
     private void Start ()
     {
-        at.EnterRoom(roomMusicIndex);
+        //at.EnterRoom(roomMusicIndex);
+        at.SoundBoard(roomMusicIndex);
         //Invoke("Lightning", Random.Range(8f, 20f));
         Invoke("Lightning", 1f);
     }
@@ -36,7 +37,8 @@ public class Bathroom : MonoBehaviour
 
     void LightningSFX ()
     {
-        at.PlaySFX(10);
+        //at.PlaySFX(10);
+        at.SoundBoard(0, -1, 10);
     }
 
 }
