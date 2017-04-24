@@ -135,9 +135,136 @@ Transform:
   m_Children:
   - {fileID: 1760156153}
   - {fileID: 1801751308}
+  - {fileID: 634842998}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &634842997
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 112657302}
+    m_Modifications:
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: dialogueTexts.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0.18778184
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 0.9822108
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: targetScene
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1436431799612464, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
+      propertyPath: m_Name
+      value: Ouch
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: targetType
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: dialogueTexts.Array.data[0]
+      value: Ouch! I knocked my head!
+      objectReference: {fileID: 0}
+    - target: {fileID: 61766191363673744, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 61766191363673744, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 0.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 61766191363673744, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -0.03
+      objectReference: {fileID: 0}
+    - target: {fileID: 61766191363673744, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: 7.43
+      objectReference: {fileID: 0}
+    - target: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 21.647001
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: dialogueTexts.Array.data[1]
+      value: It really hurts!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: dialogueTexts.Array.data[2]
+      value: Ouch! I knocked my head!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: dialogueTexts.Array.data[3]
+      value: It really hurts!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: dialogueTexts.Array.data[4]
+      value: Ouch! I knocked my head!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: dialogueTexts.Array.data[5]
+      value: It really hurts!
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: dialogueTexts.Array.data[6]
+      value: Hmm! I love that. Why don't we take our clothes off and read some E.A.
+        Poe poems?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
+  m_IsPrefabParent: 0
+--- !u!4 &634842998 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4639153577787934, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+    type: 2}
+  m_PrefabInternal: {fileID: 634842997}
 --- !u!1001 &646361172
 Prefab:
   m_ObjectHideFlags: 0
@@ -336,9 +463,7 @@ MonoBehaviour:
   triggerIcon: 0
   targetType: 0
   targetScene: 9
-  dialogueTexts:
-  - Surely, that's the way out.
-  - How an I get this open?
+  dialogueTexts: []
 --- !u!1 &1762835068
 GameObject:
   m_ObjectHideFlags: 0
@@ -366,7 +491,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5afcc34b0461e4098a77ef4fc82387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicIndex: 4
+  roomMusicIndex: 0
 --- !u!4 &1762835070
 Transform:
   m_ObjectHideFlags: 0

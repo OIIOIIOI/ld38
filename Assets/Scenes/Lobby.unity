@@ -1059,7 +1059,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5afcc34b0461e4098a77ef4fc82387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicIndex: 0
+  roomMusicIndex: 0
 --- !u!4 &291954426
 Transform:
   m_ObjectHideFlags: 0
@@ -2524,8 +2524,8 @@ MonoBehaviour:
   targetType: 2
   targetScene: 1
   dialogueTexts:
-  - '"Puzzle"? A painting of questionable tatse...'
-  - It must have been made by a children.
+  - '"Puzzle"? A painting of questionable taste...'
+  - 'It must have been made by a child. '
 --- !u!1 &1101433865
 GameObject:
   m_ObjectHideFlags: 0
@@ -3437,8 +3437,8 @@ MonoBehaviour:
   targetType: 2
   targetScene: 1
   dialogueTexts:
-  - There's a vibration...
-  - It has been a long time since someone went through here.
+  - I swear I have heard something.
+  - No one has come here for a long time.
 --- !u!1 &1713149792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3730,7 +3730,7 @@ MonoBehaviour:
   targetScene: 1
   dialogueTexts:
   - I feel air passing through slits.
-  - I hear something on the other side.
+  - Something on the other side?
 --- !u!1 &1960600904
 GameObject:
   m_ObjectHideFlags: 0
