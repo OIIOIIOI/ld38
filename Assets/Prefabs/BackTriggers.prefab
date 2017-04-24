@@ -20,8 +20,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4639153577787934}
   - component: {fileID: 114226263164452178}
-  - component: {fileID: 58193979629422796}
-  - component: {fileID: 58447899933797640}
   - component: {fileID: 61766191363673744}
   m_Layer: 0
   m_Name: BackTriggers
@@ -43,36 +41,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &58193979629422796
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1436431799612464}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 9.5, y: -5.35}
-  serializedVersion: 2
-  m_Radius: 3
---- !u!58 &58447899933797640
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1436431799612464}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: -9.5, y: -5.35}
-  serializedVersion: 2
-  m_Radius: 3
 --- !u!61 &61766191363673744
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -96,7 +64,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 14, y: 2.5}
+  m_Size: {x: 16, y: 2.5}
   m_EdgeRadius: 0
 --- !u!114 &114226263164452178
 MonoBehaviour:
@@ -109,5 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverText: Go back
+  triggerIcon: 5
+  targetType: 0
   targetScene: 2
+  dialogueTexts: []

@@ -13,25 +13,26 @@ public class LiveSprite : MonoBehaviour
     int tick = 0;
     List<Sprite> currentAlts;
 
-    void Start()
+    void Start ()
     {
         sr = gameObject.GetComponent<SpriteRenderer>();
 
         currentAlts = new List<Sprite>(alts);
-        changeSprite();
+        ChangeSprite();
     }
 
     void Update ()
     {
         tick++;
         if (tick % delay == 0)
-            changeSprite();
+            ChangeSprite();
 	}
 
-    void changeSprite ()
+    void ChangeSprite ()
     {
         int i = Random.Range(0, currentAlts.Count);
         sr.sprite = currentAlts[i];
+        Debug.Log(currentAlts[i]);
         currentAlts.RemoveAt(i);
 
         if (currentAlts.Count == 0)

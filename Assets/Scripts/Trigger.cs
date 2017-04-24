@@ -6,11 +6,24 @@ using UnityEngine.SceneManagement;
 
 public class Trigger : MonoBehaviour
 {
-
-    public string hoverText;
+    
+    public TriggerIcon triggerIcon;
     public TargetType targetType;
     public TargetScene targetScene;
     public string[] dialogueTexts;
+
+    public enum TriggerIcon
+    {
+        LookAt,
+        CandleOn,
+        CandleOff,
+        GoForwardUp,
+        GoRight,
+        GoBackwardDown,
+        GoLeft,
+        Rotate,
+        Use
+    }
 
     public enum TargetType
     {
@@ -32,41 +45,57 @@ public class Trigger : MonoBehaviour
         ColumnsRoom, ColumnsRoomDetail
     }
 
-    Text cursorTextUI;
+    Global global;
     Text dialogueTextUI;
+    Vector2 cursorPosition = new Vector2(32, 32);
 
     protected void Start ()
     {
-        GameObject go = GameObject.Find("CursorText");
-        if (go)
-        {
-            cursorTextUI = go.GetComponent<Text>();
-            cursorTextUI.text = "";
-        }
-        go = GameObject.Find("DialogueText");
-        if (go)
-        {
-            dialogueTextUI = go.GetComponent<Text>();
-            dialogueTextUI.text = "";
-        }
+        dialogueTextUI = GameObject.Find("DialogueText").GetComponent<Text>();
+        dialogueTextUI.text = "";
+
+        global = GameObject.Find("GLOBAL").GetComponent<Global>();
     }
 
     void OnMouseEnter ()
     {
-        if (cursorTextUI)
-            cursorTextUI.text = hoverText;
-    }
-
-    void OnMouseOver ()
-    {
-        if (cursorTextUI)
-            cursorTextUI.gameObject.transform.position = Input.mousePosition;
+        Texture2D icon = null;
+        switch (triggerIcon)
+        {
+            case TriggerIcon.LookAt:
+                icon = global.LookAtIcon;
+                break;
+            case TriggerIcon.CandleOff:
+                icon = global.CandleOffIcon;
+                break;
+            case TriggerIcon.CandleOn:
+                icon = global.CandleOnIcon;
+                break;
+            case TriggerIcon.GoBackwardDown:
+                icon = global.GoBackwardDownIcon;
+                break;
+            case TriggerIcon.GoForwardUp:
+                icon = global.GoForwardUpIcon;
+                break;
+            case TriggerIcon.GoLeft:
+                icon = global.GoLeftIcon;
+                break;
+            case TriggerIcon.GoRight:
+                icon = global.GoRightIcon;
+                break;
+            case TriggerIcon.Rotate:
+                icon = global.RotateIcon;
+                break;
+            case TriggerIcon.Use:
+                icon = global.UseIcon;
+                break;
+        }
+        Cursor.SetCursor(icon, cursorPosition, CursorMode.Auto);
     }
 
     void OnMouseExit ()
     {
-        if (cursorTextUI)
-            cursorTextUI.text = "";
+        Cursor.SetCursor(null, cursorPosition, CursorMode.Auto);
     }
 
     void OnMouseDown ()
@@ -74,8 +103,8 @@ public class Trigger : MonoBehaviour
         switch (targetType)
         {
             case TargetType.Scene:
-                if (cursorTextUI)
-                    cursorTextUI.text = "";
+                //if (cursorTextUI)
+                    //cursorTextUI.text = "";
                 if (dialogueTextUI)
                     dialogueTextUI.text = "";
                 SceneManager.LoadScene(targetScene.ToString());

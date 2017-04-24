@@ -152,6 +152,11 @@ Prefab:
       propertyPath: targetScene
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: triggerIcon
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
   m_IsPrefabParent: 0

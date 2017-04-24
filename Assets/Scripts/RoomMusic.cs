@@ -11,11 +11,8 @@ public class RoomMusic : MonoBehaviour
 
     void Start ()
     {
-        GameObject go = GameObject.Find("Scriptable");
-        if (go)
-            at = go.GetComponent<AudioTracker>();
-        if (at)
-            at.SoundBoard(musicIndex);
+        at = GameObject.Find("AudioTracker").GetComponent<AudioTracker>();
+        at.SoundBoard(musicIndex);
     }
 
 }

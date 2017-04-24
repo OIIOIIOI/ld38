@@ -336,7 +336,9 @@ MonoBehaviour:
   hoverText: Go on
   targetType: 0
   targetScene: 9
-  dialogueTexts: []
+  dialogueTexts:
+  - Surely, that's the way out.
+  - How an I get this open?
 --- !u!1 &1762835068
 GameObject:
   m_ObjectHideFlags: 0
