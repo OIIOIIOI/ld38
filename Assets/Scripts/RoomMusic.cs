@@ -5,14 +5,18 @@ using UnityEngine;
 public class RoomMusic : MonoBehaviour
 {
 
-    public int musicIndex;
+    public int roomMusicIndex;
 
     AudioTracker at;
 
-    void Start ()
+    void Awake()
     {
         at = GameObject.Find("AudioTracker").GetComponent<AudioTracker>();
-        at.SoundBoard(musicIndex);
+    }
+
+    void Start ()
+    {
+        at.EnterRoom(roomMusicIndex);
     }
 
 }

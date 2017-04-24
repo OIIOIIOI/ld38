@@ -17,6 +17,10 @@ public class Global : MonoBehaviour
     public Texture2D LookAtIcon;
     public Texture2D UseIcon;
 
+    AudioTracker at;
+
+    List<string> foundClues = new List<string>();
+
     void Awake ()
     {
         if (instance == null)
@@ -24,7 +28,24 @@ public class Global : MonoBehaviour
         else if (instance != this)
             Destroy(gameObject);
 
+        at = GameObject.Find("AudioTracker").GetComponent<AudioTracker>();
+
         DontDestroyOnLoad(gameObject);
+    }
+
+    public void ValidateClue (string id, int room)
+    {
+        if (!foundClues.Contains(id))
+        {
+            foundClues.Add(id);
+            at.EnterRoom(room);
+        }
+        Debug.Log(id + " - " + foundClues.Count);
+    }
+
+    public int GetProgress ()
+    {
+        return foundClues.Count;
     }
 
 }

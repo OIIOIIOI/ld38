@@ -49,12 +49,15 @@ public class Trigger : MonoBehaviour
     Text dialogueTextUI;
     Vector2 cursorPosition = new Vector2(32, 32);
 
-    protected void Start ()
+    private void Awake()
     {
         dialogueTextUI = GameObject.Find("DialogueText").GetComponent<Text>();
-        dialogueTextUI.text = "";
-
         global = GameObject.Find("GLOBAL").GetComponent<Global>();
+    }
+
+    protected void Start ()
+    {
+        dialogueTextUI.text = "";
     }
 
     void OnMouseEnter ()

@@ -8,16 +8,16 @@ public class AudioTracker : MonoBehaviour {
 	//public AudioSource[] audios; 
 
 
-	int roomnumberint = 0;
+	//int roomnumberint = 0;
 	int currentroom= 0;
-	int puzzlenumberint = 0;
+	//int puzzlenumberint = 0;
 	int currentpuzzle= 0;
-	int SFXnumberint = 0;
+	//int SFXnumberint = 0;
 
 
-	string[]  Roommlist = {"00","01","02","03","04","05","06","07","08"} ;
-	string[]  Puzzlelist ={"00","01","02","03","04","05","06","07"} ;
-	string[]  SFXlist ={"00","Candle On","Candle Off","Door","Menuing","Cadran","Stone Steps","Wood Steps","Puzzle Fail","Reward","LightYear"} ;
+	//string[]  Roommlist = {"00","01","02","03","04","05","06","07","08"} ;
+	//string[]  Puzzlelist ={"00","01","02","03","04","05","06","07"} ;
+	//string[]  SFXlist ={"00","Candle On","Candle Off","Door","Menuing","Cadran","Stone Steps","Wood Steps","Puzzle Fail","Reward","LightYear"} ;
 
 
 	public AudioSource Room01;
@@ -52,11 +52,16 @@ public class AudioTracker : MonoBehaviour {
 	public AudioSource sfx08;
 	public AudioSource sfx09;
 
+    Global global;
 
-	// Use this for initialization
-	void Start () {
-		
-		puzzle01.volume = 1;
+    private void Awake()
+    {
+        global = GameObject.Find("GLOBAL").GetComponent<Global>();
+    }
+
+    void Start ()
+    {
+        puzzle01.volume = 1;
 		puzzle01.Play();
 		puzzle02.volume = 0;
 		puzzle02.Play();
@@ -111,54 +116,70 @@ public class AudioTracker : MonoBehaviour {
 	
 	}
 
+    public void EnterRoom (int room)
+    {
+        int puzzle = global.GetProgress();
+        SoundBoard(room, puzzle);
+    }
+
 	public void SoundBoard (int roomnumberint = 0, int puzzlenumberint = 0, int SFXnumberint = 0)
     {
         //void SoundBoard (){
-        //Debug.Log("SoundBoard " + roomnumberint + " / " + currentroom);
-		
-		if (SFXnumberint == 10) {
-			weather03.Play();
-			SFXnumberint = 0;
-		}
-		if (SFXnumberint == 1) {
-			sfx01.Play();
-			SFXnumberint = 0;
-		}
-		if (SFXnumberint == 2) {
-			sfx01.Stop();
-			sfx02.Play();
-			SFXnumberint = 0;
-		}
-		if (SFXnumberint == 3) {
-			sfx03.Play();
-			SFXnumberint = 0;
-		}
-		if (SFXnumberint == 4) {
-			sfx04.Play();
-			SFXnumberint = 0;
-		}
-		if (SFXnumberint == 5) {
-			sfx05.Play();
-			SFXnumberint = 0;
-		}
-		if (SFXnumberint == 6) {
-			sfx06.Play();
-			SFXnumberint = 0;
-		}
-		if (SFXnumberint == 7) {
-			sfx07.Play();
-			SFXnumberint = 0;
-		}
-		if (SFXnumberint == 8) {
-			sfx08.Play();
-			SFXnumberint = 0;
-		}
-		if (SFXnumberint == 9) {
-			sfx09.Play();
-			SFXnumberint = 0;
-		}
+        Debug.Log("SoundBoard " + roomnumberint + " / " + puzzlenumberint);
 
-		if (roomnumberint != currentroom) {
+        if (SFXnumberint == 10)
+        {
+            weather03.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 1)
+        {
+            sfx01.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 2)
+        {
+            sfx01.Stop();
+            sfx02.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 3)
+        {
+            sfx03.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 4)
+        {
+            sfx04.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 5)
+        {
+            sfx05.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 6)
+        {
+            sfx06.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 7)
+        {
+            sfx07.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 8)
+        {
+            sfx08.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 9)
+        {
+            sfx09.Play();
+            SFXnumberint = 0;
+        }
+
+        if (roomnumberint != currentroom) {
             //Debug.Log("different room");
 			StopAllCoroutines ();
 			currentroom = roomnumberint;
@@ -173,6 +194,62 @@ public class AudioTracker : MonoBehaviour {
 
 		}
 	}
+
+    public void PlaySFX (int SFXnumberint)
+    {
+
+        if (SFXnumberint == 10)
+        {
+            weather03.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 1)
+        {
+            sfx01.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 2)
+        {
+            sfx01.Stop();
+            sfx02.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 3)
+        {
+            sfx03.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 4)
+        {
+            sfx04.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 5)
+        {
+            sfx05.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 6)
+        {
+            sfx06.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 7)
+        {
+            sfx07.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 8)
+        {
+            sfx08.Play();
+            SFXnumberint = 0;
+        }
+        if (SFXnumberint == 9)
+        {
+            sfx09.Play();
+            SFXnumberint = 0;
+        }
+    }
 
 	/*void OnGUI (){
 

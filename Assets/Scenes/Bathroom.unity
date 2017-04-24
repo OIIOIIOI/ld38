@@ -438,7 +438,6 @@ GameObject:
   m_Component:
   - component: {fileID: 636700638}
   - component: {fileID: 636700637}
-  - component: {fileID: 636700639}
   m_Layer: 0
   m_Name: Script
   m_TagString: Untagged
@@ -457,6 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02deb6153e1b5d84ba5e64c110b82cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  roomMusicIndex: 1
   background: {fileID: 125866245}
 --- !u!4 &636700638
 Transform:
@@ -471,18 +471,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &636700639
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 636700636}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7f5afcc34b0461e4098a77ef4fc82387, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  musicIndex: 1
 --- !u!1 &897963823
 GameObject:
   m_ObjectHideFlags: 0
@@ -549,7 +537,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverText: Go left
+  triggerIcon: 0
   targetType: 0
   targetScene: 11
   dialogueTexts: []
@@ -883,7 +871,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverText: Go on
+  triggerIcon: 0
   targetType: 0
   targetScene: 3
   dialogueTexts: []

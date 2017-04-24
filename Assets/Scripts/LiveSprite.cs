@@ -32,7 +32,6 @@ public class LiveSprite : MonoBehaviour
     {
         int i = Random.Range(0, currentAlts.Count);
         sr.sprite = currentAlts[i];
-        Debug.Log(currentAlts[i]);
         currentAlts.RemoveAt(i);
 
         if (currentAlts.Count == 0)
