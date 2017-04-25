@@ -212,7 +212,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5afcc34b0461e4098a77ef4fc82387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  musicIndex: 7
+  roomMusicIndex: 0
 --- !u!4 &683152949
 Transform:
   m_ObjectHideFlags: 0
@@ -292,7 +292,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverText: Go on
+  triggerIcon: 3
   targetType: 0
   targetScene: 6
   dialogueTexts: []

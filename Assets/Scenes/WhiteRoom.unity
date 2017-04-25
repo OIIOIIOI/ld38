@@ -257,6 +257,11 @@ Prefab:
       value: Hmm! I love that. Why don't we take our clothes off and read some E.A.
         Poe poems?
       objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: triggerIcon
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
   m_IsPrefabParent: 0
@@ -460,7 +465,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerIcon: 0
+  triggerIcon: 3
   targetType: 0
   targetScene: 9
   dialogueTexts: []
