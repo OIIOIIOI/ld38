@@ -5,11 +5,11 @@ using UnityEngine;
 public class LiveSprite : MonoBehaviour
 {
 
-    public int delay;
     public Sprite[] alts;
 
     SpriteRenderer sr;
 
+    int delay = 8;
     int tick = 0;
     List<Sprite> currentAlts;
 

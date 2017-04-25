@@ -57,11 +57,12 @@ public class Trigger : MonoBehaviour
 
     protected void Start ()
     {
-        dialogueTextUI.text = "";
+        //dialogueTextUI.text = "";
     }
 
     void OnMouseEnter ()
     {
+        return;
         Texture2D icon = null;
         switch (triggerIcon)
         {
@@ -98,7 +99,8 @@ public class Trigger : MonoBehaviour
 
     void OnMouseExit ()
     {
-        Cursor.SetCursor(null, cursorPosition, CursorMode.Auto);
+        return;
+        //Cursor.SetCursor(null, cursorPosition, CursorMode.Auto);
     }
 
     void OnMouseDown ()

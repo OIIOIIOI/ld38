@@ -2234,6 +2234,9 @@ MonoBehaviour:
   RotateIcon: {fileID: 2800000, guid: 89c95cdee0d03154f8dfe6b3720268c4, type: 3}
   LookAtIcon: {fileID: 2800000, guid: 70f8b8ee860a4734a9e27a3c2b060dc7, type: 3}
   UseIcon: {fileID: 2800000, guid: e3d5272cadb6ca145a42c6219a65a2ac, type: 3}
+  compassRotationA: 3
+  compassRotationB: 0
+  compassRotationC: 1
 --- !u!1 &777173183
 GameObject:
   m_ObjectHideFlags: 0

@@ -36,12 +36,15 @@ public class Background : MonoBehaviour
         sr.color = Color.clear;
         sr.sprite = s;
 
-        for (float f = 0f; f <= 1f; f += fadeInStep)
+        if (fadeInStep > 0f)
         {
-            sr.color = new Color(1, 1, 1, f);
-            yield return new WaitForFixedUpdate();
+            for (float f = 0f; f <= 1f; f += fadeInStep)
+            {
+                sr.color = new Color(1, 1, 1, f);
+                yield return new WaitForFixedUpdate();
+            }
+            sr.color = new Color(1, 1, 1, 1);
         }
-        sr.color = new Color(1, 1, 1, 1);
 
         if (swapTarget)
             swapTarget.sprite = s;

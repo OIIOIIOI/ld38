@@ -6,7 +6,7 @@ public class Global : MonoBehaviour
 {
 
     public static Global instance = null;
-    
+
     public Texture2D CandleOnIcon;
     public Texture2D CandleOffIcon;
     public Texture2D GoForwardUpIcon;
@@ -21,7 +21,11 @@ public class Global : MonoBehaviour
 
     List<string> foundClues = new List<string>();
 
-    void Awake ()
+    public int compassRotationA;
+    public int compassRotationB;
+    public int compassRotationC;
+
+    void Awake()
     {
         if (instance == null)
             instance = this;
@@ -33,19 +37,34 @@ public class Global : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void ValidateClue (string id, int room)
+    public void ValidateClue(string id)
     {
         if (!foundClues.Contains(id))
         {
             foundClues.Add(id);
-            at.EnterRoom(room);
+            Debug.Log(id + " ok, found: " + GetProgress());
+            at.PuzzleBoard(GetProgress());
         }
-        Debug.Log(id + " - " + foundClues.Count);
+    }
+
+    public void InvalidateClue (string id)
+    {
+        if (foundClues.Contains(id))
+        {
+            foundClues.Remove(id);
+            Debug.Log(id + " ok, unfound: " + GetProgress());
+            at.PuzzleBoard(GetProgress());
+        }
+    }
+
+    public bool IsClueValidated (string id)
+    {
+        return foundClues.Contains(id);
     }
 
     public int GetProgress ()
     {
-        return foundClues.Count;
+        return foundClues.Count + 1;
     }
 
 }
