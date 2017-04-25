@@ -7,6 +7,7 @@ public class CompassRoom : MonoBehaviour
 
     public int roomMusicIndex;
     public Background background;
+    public GameObject[] spritesToHide;
 
     AudioTracker at;
     Global global;
@@ -30,6 +31,17 @@ public class CompassRoom : MonoBehaviour
             state += 4;
 
         background.Swap(state, 0f);
+
+        if (state == 7)
+        {
+            foreach (GameObject go in spritesToHide)
+                go.SetActive(false);
+        }
+        else
+        {
+            foreach (GameObject go in spritesToHide)
+                go.SetActive(true);
+        }
     }
 
 }

@@ -233,6 +233,21 @@ Prefab:
       propertyPath: correctRotation
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 114791472732076180, guid: 6c008876c9473104f8edb4564550492d,
+        type: 2}
+      propertyPath: triggerIcon
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 114791472732076180, guid: 6c008876c9473104f8edb4564550492d,
+        type: 2}
+      propertyPath: targetType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114791472732076180, guid: 6c008876c9473104f8edb4564550492d,
+        type: 2}
+      propertyPath: targetScene
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c008876c9473104f8edb4564550492d, type: 2}
   m_IsPrefabParent: 0

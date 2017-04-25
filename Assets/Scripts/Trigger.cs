@@ -21,7 +21,7 @@ public class Trigger : MonoBehaviour
         GoRight,
         GoBackwardDown,
         GoLeft,
-        Rotate,
+        Rotator,
         Use
     }
 
@@ -46,6 +46,7 @@ public class Trigger : MonoBehaviour
     }
 
     Global global;
+    MouseScript mouseScript;
     Text dialogueTextUI;
     Vector2 cursorPosition = new Vector2(32, 32);
 
@@ -53,6 +54,7 @@ public class Trigger : MonoBehaviour
     {
         dialogueTextUI = GameObject.Find("DialogueText").GetComponent<Text>();
         global = GameObject.Find("GLOBAL").GetComponent<Global>();
+        mouseScript = GameObject.Find("GLOBAL").GetComponent<MouseScript>();
     }
 
     protected void Start ()
@@ -62,44 +64,45 @@ public class Trigger : MonoBehaviour
 
     void OnMouseEnter ()
     {
-        return;
-        Texture2D icon = null;
+        //Debug.Log(triggerIcon);
+        //Texture2D icon = null;
         switch (triggerIcon)
         {
             case TriggerIcon.LookAt:
-                icon = global.LookAtIcon;
+                mouseScript.MouseCursor(7);
                 break;
             case TriggerIcon.CandleOff:
-                icon = global.CandleOffIcon;
+                mouseScript.MouseCursor(1);
                 break;
             case TriggerIcon.CandleOn:
-                icon = global.CandleOnIcon;
+                mouseScript.MouseCursor(0);
                 break;
             case TriggerIcon.GoBackwardDown:
-                icon = global.GoBackwardDownIcon;
+                mouseScript.MouseCursor(4);
                 break;
             case TriggerIcon.GoForwardUp:
-                icon = global.GoForwardUpIcon;
+                mouseScript.MouseCursor(2);
                 break;
             case TriggerIcon.GoLeft:
-                icon = global.GoLeftIcon;
+                mouseScript.MouseCursor(5);
                 break;
             case TriggerIcon.GoRight:
-                icon = global.GoRightIcon;
-                break;
-            case TriggerIcon.Rotate:
-                icon = global.RotateIcon;
+                mouseScript.MouseCursor(3);
                 break;
             case TriggerIcon.Use:
-                icon = global.UseIcon;
+                mouseScript.MouseCursor(8);
+                break;
+            case TriggerIcon.Rotator:
+                mouseScript.MouseCursor(6);
                 break;
         }
-        Cursor.SetCursor(icon, cursorPosition, CursorMode.Auto);
+        //Cursor.SetCursor(icon, cursorPosition, CursorMode.Auto);
     }
 
     void OnMouseExit ()
     {
-        return;
+        mouseScript.MouseCursor(9);
+        //return;
         //Cursor.SetCursor(null, cursorPosition, CursorMode.Auto);
     }
 
@@ -108,8 +111,6 @@ public class Trigger : MonoBehaviour
         switch (targetType)
         {
             case TargetType.Scene:
-                //if (cursorTextUI)
-                    //cursorTextUI.text = "";
                 if (dialogueTextUI)
                     dialogueTextUI.text = "";
                 SceneManager.LoadScene(targetScene.ToString());

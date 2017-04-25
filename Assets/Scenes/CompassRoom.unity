@@ -318,6 +318,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomMusicIndex: 7
   background: {fileID: 323139342}
+  spritesToHide:
+  - {fileID: 903668740}
+  - {fileID: 1900955496}
 --- !u!1 &903668740
 GameObject:
   m_ObjectHideFlags: 0

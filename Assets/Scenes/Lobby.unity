@@ -2191,6 +2191,7 @@ GameObject:
   m_Component:
   - component: {fileID: 772807314}
   - component: {fileID: 772807315}
+  - component: {fileID: 772807316}
   m_Layer: 0
   m_Name: GLOBAL
   m_TagString: Untagged
@@ -2237,6 +2238,28 @@ MonoBehaviour:
   compassRotationA: 3
   compassRotationB: 0
   compassRotationC: 1
+--- !u!114 &772807316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 772807313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fba51768a60722f41bdb4dc795bd1ed3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Cursor1: {fileID: 2800000, guid: 21e3eaa2bd355d549b5be8bfdc5437b0, type: 3}
+  Cursor2: {fileID: 2800000, guid: 0aa7d7479f936a842b56b5d0c0e49033, type: 3}
+  Cursor3: {fileID: 2800000, guid: 17aeaa84e2b01ae49bb8751392bd0a42, type: 3}
+  Cursor4: {fileID: 2800000, guid: a1b340fd9fe9f9240b88e8840080f7f4, type: 3}
+  Cursor5: {fileID: 2800000, guid: 0eae0225e148d2c4c9f100d3d2566797, type: 3}
+  Cursor6: {fileID: 2800000, guid: 5fa3a9ce3c4fb854bb1b4e0fa29b5461, type: 3}
+  Cursor7: {fileID: 2800000, guid: 89c95cdee0d03154f8dfe6b3720268c4, type: 3}
+  Cursor8: {fileID: 2800000, guid: 7d7edaa8373839442bc5f161a5193be0, type: 3}
+  Cursor9: {fileID: 2800000, guid: 25325e8a5c1563c4181e9582b33ec01b, type: 3}
+  Cursor10: {fileID: 2800000, guid: 460e0ef9f3c88034693bd23502436acb, type: 3}
+  Background: {fileID: 0}
 --- !u!1 &777173183
 GameObject:
   m_ObjectHideFlags: 0
