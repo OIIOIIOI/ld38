@@ -57,6 +57,11 @@ public class Global : MonoBehaviour
         }
     }
 
+    public bool IsClueValidated (string id)
+    {
+        return foundClues.Contains(id);
+    }
+
     public int GetProgress ()
     {
         return foundClues.Count + 1;
