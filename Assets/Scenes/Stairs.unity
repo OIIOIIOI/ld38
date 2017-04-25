@@ -303,7 +303,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerIcon: 0
+  triggerIcon: 6
   targetType: 0
   targetScene: 5
   dialogueTexts:
@@ -736,7 +736,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerIcon: 0
+  triggerIcon: 3
   targetType: 0
   targetScene: 8
   dialogueTexts:

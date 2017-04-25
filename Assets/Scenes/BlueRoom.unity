@@ -220,6 +220,11 @@ Prefab:
       propertyPath: m_Size.y
       value: 1.37
       objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: triggerIcon
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58447899933797640, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
     - {fileID: 58193979629422796, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
@@ -302,6 +307,11 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 4.11
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: triggerIcon
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58447899933797640, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
@@ -609,7 +619,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bdcc7ad504a7a444e90ca3d265d4cc1d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  triggerIcon: 0
+  triggerIcon: 3
   targetType: 0
   targetScene: 13
   dialogueTexts: []
@@ -690,6 +700,11 @@ Prefab:
         type: 2}
       propertyPath: m_Size.y
       value: 1.52
+      objectReference: {fileID: 0}
+    - target: {fileID: 114226263164452178, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: triggerIcon
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 58447899933797640, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
