@@ -8,12 +8,12 @@ public class RoomMusic : MonoBehaviour
     public int roomMusicIndex;
 
     AudioTracker at;
-    Global global;
+    //Global global;
 
     void Awake()
     {
         at = GameObject.Find("AudioTracker").GetComponent<AudioTracker>();
-        global = GameObject.Find("GLOBAL").GetComponent<Global>();
+        //global = GameObject.Find("GLOBAL").GetComponent<Global>();
     }
 
     void Start ()

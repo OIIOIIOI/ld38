@@ -6,21 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChapelDoorTrigger : Trigger
 {
 
-    AudioTracker at;
-    Global global;
-
-    private void Awake()
-    {
-        at = GameObject.Find("AudioTracker").GetComponent<AudioTracker>();
-        global = GameObject.Find("GLOBAL").GetComponent<Global>();
-    }
-
-    //new void Start()
-    //{
-        //base.Start();
-    //}
-
-    override protected void CustomScript ()
+    override protected void CustomScript (Trigger trigger)
     {
         if (global.IsClueValidated("compass1") &&
             global.IsClueValidated("compass2") &&

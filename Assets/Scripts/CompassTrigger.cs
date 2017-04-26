@@ -10,16 +10,7 @@ public class CompassTrigger : Trigger
 
     bool rotating = false;
     int rotation;
-
-    AudioTracker at;
-    Global global;
-
-    private void Awake()
-    {
-        at = GameObject.Find("AudioTracker").GetComponent<AudioTracker>();
-        global = GameObject.Find("GLOBAL").GetComponent<Global>();
-    }
-
+    
     new void Start ()
     {
         base.Start();
@@ -40,7 +31,7 @@ public class CompassTrigger : Trigger
         transform.Rotate(Vector3.forward, -90f * rotation);
     }
 
-    override protected void CustomScript ()
+    override protected void CustomScript (Trigger trigger)
     {
         if (!rotating)
         {

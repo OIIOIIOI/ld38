@@ -118,6 +118,7 @@ GameObject:
   - component: {fileID: 1116536}
   - component: {fileID: 1116538}
   - component: {fileID: 1116537}
+  - component: {fileID: 1116539}
   m_Layer: 5
   m_Name: DialogueText
   m_TagString: Untagged
@@ -138,8 +139,8 @@ RectTransform:
   m_Father: {fileID: 396059730}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.1, y: 0.05}
-  m_AnchorMax: {x: 0.9, y: 0.05}
+  m_AnchorMin: {x: 0.1, y: 0.08}
+  m_AnchorMax: {x: 0.9, y: 0.08}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 120}
   m_Pivot: {x: 0.5, y: 0}
@@ -163,9 +164,9 @@ MonoBehaviour:
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
-    m_Font: {fileID: 12800000, guid: a7f122623bffef54eac7090b3913e17d, type: 3}
+    m_Font: {fileID: 12800000, guid: e29d93465499e214fbd91d91148d4e8c, type: 3}
     m_FontSize: 20
-    m_FontStyle: 1
+    m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 2
     m_MaxSize: 40
@@ -175,17 +176,27 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: '01234567890123456789012345678901234567890123456789
-
-    01234567890123456789012345678901234567890123456789
-
-    01234567890123456789012345678901234567890123456789'
+  m_Text: 
 --- !u!222 &1116538
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1116535}
+--- !u!114 &1116539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1116535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1573420865, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 0, g: 0, b: 0, a: 1}
+  m_EffectDistance: {x: 1.5, y: -1.5}
+  m_UseGraphicAlpha: 0
 --- !u!1 &16190652
 GameObject:
   m_ObjectHideFlags: 0
@@ -2226,15 +2237,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd283a56924709240b2afc4217d20c1c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CandleOnIcon: {fileID: 2800000, guid: 42cdb7a70ac5329449905f9446254e25, type: 3}
-  CandleOffIcon: {fileID: 2800000, guid: 206acdc2748d9584b995c6e626234114, type: 3}
-  GoForwardUpIcon: {fileID: 2800000, guid: 17aeaa84e2b01ae49bb8751392bd0a42, type: 3}
-  GoRightIcon: {fileID: 2800000, guid: 8a71495ea9e8b2f48b1da73ee0413abd, type: 3}
-  GoBackwardDownIcon: {fileID: 2800000, guid: 0eae0225e148d2c4c9f100d3d2566797, type: 3}
-  GoLeftIcon: {fileID: 2800000, guid: 5fa3a9ce3c4fb854bb1b4e0fa29b5461, type: 3}
-  RotateIcon: {fileID: 2800000, guid: 89c95cdee0d03154f8dfe6b3720268c4, type: 3}
-  LookAtIcon: {fileID: 2800000, guid: 70f8b8ee860a4734a9e27a3c2b060dc7, type: 3}
-  UseIcon: {fileID: 2800000, guid: e3d5272cadb6ca145a42c6219a65a2ac, type: 3}
   compassRotationA: 3
   compassRotationB: 0
   compassRotationC: 1
@@ -2255,11 +2257,10 @@ MonoBehaviour:
   Cursor4: {fileID: 2800000, guid: a1b340fd9fe9f9240b88e8840080f7f4, type: 3}
   Cursor5: {fileID: 2800000, guid: 0eae0225e148d2c4c9f100d3d2566797, type: 3}
   Cursor6: {fileID: 2800000, guid: 5fa3a9ce3c4fb854bb1b4e0fa29b5461, type: 3}
-  Cursor7: {fileID: 2800000, guid: 89c95cdee0d03154f8dfe6b3720268c4, type: 3}
+  Cursor7: {fileID: 2800000, guid: 6c544979e6b57ca42ac72344a2cb80ac, type: 3}
   Cursor8: {fileID: 2800000, guid: 7d7edaa8373839442bc5f161a5193be0, type: 3}
   Cursor9: {fileID: 2800000, guid: 25325e8a5c1563c4181e9582b33ec01b, type: 3}
   Cursor10: {fileID: 2800000, guid: 460e0ef9f3c88034693bd23502436acb, type: 3}
-  Background: {fileID: 0}
 --- !u!1 &777173183
 GameObject:
   m_ObjectHideFlags: 0

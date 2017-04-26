@@ -11,6 +11,7 @@ public class Trigger : MonoBehaviour
     public TargetType targetType;
     public TargetScene targetScene;
     public string[] dialogueTexts;
+    public string customParam;
 
     public enum TriggerIcon
     {
@@ -22,7 +23,8 @@ public class Trigger : MonoBehaviour
         GoBackwardDown,
         GoLeft,
         Rotator,
-        Use
+        Use,
+        Default
     }
 
     public enum TargetType
@@ -45,13 +47,15 @@ public class Trigger : MonoBehaviour
         ColumnsRoom, ColumnsRoomDetail
     }
 
-    Global global;
-    MouseScript mouseScript;
-    Text dialogueTextUI;
-    Vector2 cursorPosition = new Vector2(32, 32);
+    protected Global global;
+    protected AudioTracker at;
+    protected MouseScript mouseScript;
+    protected Text dialogueTextUI;
+    protected Vector2 cursorPosition = new Vector2(32, 32);
 
     private void Awake()
     {
+        at = GameObject.Find("AudioTracker").GetComponent<AudioTracker>();
         dialogueTextUI = GameObject.Find("DialogueText").GetComponent<Text>();
         global = GameObject.Find("GLOBAL").GetComponent<Global>();
         mouseScript = GameObject.Find("GLOBAL").GetComponent<MouseScript>();
@@ -64,8 +68,11 @@ public class Trigger : MonoBehaviour
 
     void OnMouseEnter ()
     {
-        //Debug.Log(triggerIcon);
-        //Texture2D icon = null;
+        RefreshIcon();
+    }
+
+    protected void RefreshIcon ()
+    {
         switch (triggerIcon)
         {
             case TriggerIcon.LookAt:
@@ -95,15 +102,15 @@ public class Trigger : MonoBehaviour
             case TriggerIcon.Rotator:
                 mouseScript.MouseCursor(6);
                 break;
+            default:
+                mouseScript.MouseCursor(9);
+                break;
         }
-        //Cursor.SetCursor(icon, cursorPosition, CursorMode.Auto);
     }
 
     void OnMouseExit ()
     {
         mouseScript.MouseCursor(9);
-        //return;
-        //Cursor.SetCursor(null, cursorPosition, CursorMode.Auto);
     }
 
     void OnMouseDown ()
@@ -113,6 +120,7 @@ public class Trigger : MonoBehaviour
             case TargetType.Scene:
                 if (dialogueTextUI)
                     dialogueTextUI.text = "";
+                mouseScript.MouseCursor(9);
                 SceneManager.LoadScene(targetScene.ToString());
                 break;
 
@@ -127,11 +135,11 @@ public class Trigger : MonoBehaviour
                 break;
 
             case TargetType.Custom:
-                CustomScript();
+                CustomScript(this);
                 break;
         }
     }
 
-    protected virtual void CustomScript () { }
+    protected virtual void CustomScript (Trigger trigger) { }
 
 }

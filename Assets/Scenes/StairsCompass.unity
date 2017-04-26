@@ -186,6 +186,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114791472732076180, guid: 6c008876c9473104f8edb4564550492d,
+        type: 2}
+      propertyPath: dialogueTexts.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4058379657601262, guid: 6c008876c9473104f8edb4564550492d, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -247,6 +252,11 @@ Prefab:
         type: 2}
       propertyPath: targetScene
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114791472732076180, guid: 6c008876c9473104f8edb4564550492d,
+        type: 2}
+      propertyPath: dialogueTexts.Array.data[0]
+      value: ok boii
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6c008876c9473104f8edb4564550492d, type: 2}

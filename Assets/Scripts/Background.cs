@@ -33,23 +33,25 @@ public class Background : MonoBehaviour
 
     IEnumerator SwapSprite (Sprite s, float fadeInStep)
     {
-        sr.color = Color.clear;
+        sr.color = new Color(1f, 1f, 1f, 0f);
         sr.sprite = s;
 
         if (fadeInStep > 0f)
         {
             for (float f = 0f; f <= 1f; f += fadeInStep)
             {
-                sr.color = new Color(1, 1, 1, f);
+                sr.color = new Color(1f, 1f, 1f, f);
                 yield return new WaitForFixedUpdate();
             }
-            sr.color = new Color(1, 1, 1, 1);
+            sr.color = Color.white;
         }
 
         if (swapTarget)
             swapTarget.sprite = s;
-        sr.color = Color.clear;
+
+        sr.color = new Color(1f, 1f, 1f, 0f);
         sr.sprite = null;
+
         yield return null;
     }
 

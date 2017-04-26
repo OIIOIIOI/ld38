@@ -7,13 +7,13 @@ public class Stairs : MonoBehaviour
 
     public int roomMusicIndex;
 
-    AudioTracker at;
-    Global global;
+    //AudioTracker at;
+    //Global global;
 
     private void Awake()
     {
-        at = GameObject.Find("AudioTracker").GetComponent<AudioTracker>();
-        global = GameObject.Find("GLOBAL").GetComponent<Global>();
+        //at = GameObject.Find("AudioTracker").GetComponent<AudioTracker>();
+        //global = GameObject.Find("GLOBAL").GetComponent<Global>();
     }
 
 }

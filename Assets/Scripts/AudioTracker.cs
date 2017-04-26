@@ -16,9 +16,9 @@ public class AudioTracker : MonoBehaviour
     int SFXnumberint = 0;
 
 
-    string[] Roommlist = { "00", "01", "02", "03", "04", "05", "06", "07", "08" };
-    string[] Puzzlelist = { "00", "01", "02", "03", "04", "05", "06", "07" };
-    string[] SFXlist = { "00", "Candle On", "Candle Off", "Door", "Menuing", "Cadran", "Stone Steps", "Wood Steps", "Puzzle Fail", "Reward", "LightYear" };
+    //string[] Roommlist = { "00", "01", "02", "03", "04", "05", "06", "07", "08" };
+    //string[] Puzzlelist = { "00", "01", "02", "03", "04", "05", "06", "07" };
+    //string[] SFXlist = { "00", "Candle On", "Candle Off", "Door", "Menuing", "Cadran", "Stone Steps", "Wood Steps", "Puzzle Fail", "Reward", "LightYear" };
 
 
     public AudioSource Room01;
