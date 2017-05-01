@@ -11,14 +11,18 @@ public class Global : MonoBehaviour
 
     List<string> foundClues = new List<string>();
 
-    public int compassRotationA;
-    public int compassRotationB;
-    public int compassRotationC;
+    public int compassRotationA = 3;
+    public int compassRotationB = 0;
+    public int compassRotationC = 1;
 
     public bool firstCandleOn = false;
     public bool thirdCandleOn = false;
 
-    void Awake()
+    public int lockNumberA = 3;
+    public int lockNumberB = 4;
+    public int lockNumberC = 6;
+
+    void Awake ()
     {
         if (instance == null)
             instance = this;
@@ -30,12 +34,24 @@ public class Global : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
+    public void ResetAll ()
+    {
+        compassRotationA = 3;
+        compassRotationB = 0;
+        compassRotationC = 1;
+        lockNumberA = 3;
+        lockNumberB = 4;
+        lockNumberC = 6;
+        firstCandleOn = false;
+        thirdCandleOn = false;
+        foundClues.Clear();
+    }
+
     public void ValidateClue (string id)
     {
         if (!foundClues.Contains(id))
         {
             foundClues.Add(id);
-            Debug.Log(id + " ok, found: " + GetProgress());
             at.PuzzleBoard(GetProgress());
 
             if (id.Contains("compass"))
@@ -51,7 +67,6 @@ public class Global : MonoBehaviour
         if (foundClues.Contains(id))
         {
             foundClues.Remove(id);
-            Debug.Log(id + " ok, unfound: " + GetProgress());
             at.PuzzleBoard(GetProgress());
         }
     }

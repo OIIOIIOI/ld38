@@ -188,6 +188,7 @@ public class AudioTracker : MonoBehaviour
         }
         if (SFXnumberint == 9)
         {
+            sfx09.volume = 0.25f;
             sfx09.Play();
             SFXnumberint = 0;
         }
