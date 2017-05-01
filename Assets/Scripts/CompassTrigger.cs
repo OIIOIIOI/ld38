@@ -31,7 +31,7 @@ public class CompassTrigger : Trigger
         transform.Rotate(Vector3.forward, -90f * rotation);
     }
 
-    override protected void CustomScript (Trigger trigger)
+    override public void CustomScript (Trigger trigger)
     {
         if (!rotating)
         {

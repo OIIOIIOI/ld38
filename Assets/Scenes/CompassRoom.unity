@@ -135,9 +135,84 @@ Transform:
   m_Children:
   - {fileID: 1760156153}
   - {fileID: 1801751308}
+  - {fileID: 1789313934}
+  - {fileID: 193240498}
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &193240497
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 193240498}
+  - component: {fileID: 193240500}
+  - component: {fileID: 193240499}
+  m_Layer: 0
+  m_Name: Candles
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &193240498
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193240497}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 112657302}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &193240499
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193240497}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.1, y: -3.74}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 3.13, y: 0.78}
+  m_EdgeRadius: 0
+--- !u!114 &193240500
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193240497}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64f4ec99d10fe2240bba7d1c03dde99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerIcon: 0
+  targetType: 2
+  targetScene: 6
+  dialogueTexts:
+  - I can't light up or put out these candles... How?
+  - It's like they are controlled in some other way...
+  customParam: 
 --- !u!1 &323139341
 GameObject:
   m_ObjectHideFlags: 0
@@ -167,7 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   alts:
-  - {fileID: 0}
+  - {fileID: 21300000, guid: 933b35f7972ff6c40b2c99350995b0fa, type: 3}
   - {fileID: 21300000, guid: ce4debe9731f11140a1b9c0667d8f9cc, type: 3}
   - {fileID: 21300000, guid: 13e455a8906255f479bc72ba801329ac, type: 3}
   - {fileID: 21300000, guid: 7f62663123302ce4ba19c7659b402e6f, type: 3}
@@ -208,7 +283,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: f725ddccaaa6b9841963d65cd275064d, type: 3}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
@@ -223,7 +298,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 323139341}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -273,6 +348,11 @@ Prefab:
       propertyPath: m_Enabled
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 20836529594344520, guid: a013f8d8aa44d4d499e509453958910b,
+        type: 2}
+      propertyPath: orthographic
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a013f8d8aa44d4d499e509453958910b, type: 2}
   m_IsPrefabParent: 0
@@ -318,8 +398,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   roomMusicIndex: 7
   background: {fileID: 323139342}
-  spritesToHide:
-  - {fileID: 903668740}
+  door: {fileID: 903668740}
+  lockedTriggers:
+  - {fileID: 1760156152}
+  - {fileID: 193240497}
+  openTrigger: {fileID: 1789313933}
 --- !u!1 &903668740
 GameObject:
   m_ObjectHideFlags: 0
@@ -385,7 +468,7 @@ SpriteRenderer:
   m_SortingLayerID: -1387055255
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 933b35f7972ff6c40b2c99350995b0fa, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bc508bb4e2d4ab345a5d4274201ffb93, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -400,7 +483,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 903668740}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -417,7 +500,7 @@ GameObject:
   - component: {fileID: 1760156156}
   - component: {fileID: 1760156154}
   m_Layer: 0
-  m_Name: ChapelDoor
+  m_Name: ChapelDoorLocked
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -448,7 +531,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.05, y: -1}
+  m_Offset: {x: -0.05, y: -0.4}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -476,7 +559,81 @@ MonoBehaviour:
   targetType: 2
   targetScene: 6
   dialogueTexts:
-  - locked
+  - This looks impenetrable.
+  - No way I can make it through this... thing.
+  - There must be a way to get rid of it.
+  customParam: 
+--- !u!1 &1789313933
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1789313934}
+  - component: {fileID: 1789313936}
+  - component: {fileID: 1789313935}
+  m_Layer: 0
+  m_Name: ChapelDoorUnlocked
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1789313934
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1789313933}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 112657302}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &1789313935
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1789313933}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -0.05, y: -0.4}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 2.5, y: 5.1}
+  m_EdgeRadius: 0
+--- !u!114 &1789313936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1789313933}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64f4ec99d10fe2240bba7d1c03dde99b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  triggerIcon: 3
+  targetType: 0
+  targetScene: 6
+  dialogueTexts: []
+  customParam: 
 --- !u!1001 &1801751307
 Prefab:
   m_ObjectHideFlags: 0
@@ -520,6 +677,11 @@ Prefab:
         type: 2}
       propertyPath: targetScene
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 61766191363673744, guid: 7018472ccb52e3d4c970ae7877df3fd6,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: -5.6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7018472ccb52e3d4c970ae7877df3fd6, type: 2}
@@ -577,7 +739,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f725ddccaaa6b9841963d65cd275064d, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 933b35f7972ff6c40b2c99350995b0fa, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -592,7 +754,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1940018801}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -0.55, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}

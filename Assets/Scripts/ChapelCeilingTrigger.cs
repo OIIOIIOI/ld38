@@ -20,7 +20,7 @@ public class ChapelCeilingTrigger : Trigger
         colliderCapsule = gameObject.GetComponent<CapsuleCollider2D>();
     }
 
-    override protected void CustomScript (Trigger trigger)
+    override public void CustomScript (Trigger trigger)
     {
         StartCoroutine("LookUpDown");
     }

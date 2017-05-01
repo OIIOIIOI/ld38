@@ -44,19 +44,22 @@ public class Trigger : MonoBehaviour
         WhiteRoom,
         Library, LibraryCompass,
         BlueRoom, BlueRoomCompass,
-        ColumnsRoom, ColumnsRoomDetail
+        ColumnsRoom, ColumnsRoomDetail,
+        TitleScreen, CreditsScreen
     }
 
     protected Global global;
     protected AudioTracker at;
     protected MouseScript mouseScript;
-    protected Text dialogueTextUI;
+    //protected Text dialogueTextUI;
+    protected AutoHideText dialogueTextUI;
     protected Vector2 cursorPosition = new Vector2(32, 32);
 
     private void Awake()
     {
         at = GameObject.Find("AudioTracker").GetComponent<AudioTracker>();
-        dialogueTextUI = GameObject.Find("DialogueText").GetComponent<Text>();
+        //dialogueTextUI = GameObject.Find("DialogueText").GetComponent<Text>();
+        dialogueTextUI = GameObject.Find("DialogueText").GetComponent<AutoHideText>();
         global = GameObject.Find("GLOBAL").GetComponent<Global>();
         mouseScript = GameObject.Find("GLOBAL").GetComponent<MouseScript>();
     }
@@ -71,7 +74,7 @@ public class Trigger : MonoBehaviour
         RefreshIcon();
     }
 
-    protected void RefreshIcon ()
+    public void RefreshIcon ()
     {
         switch (triggerIcon)
         {
@@ -119,7 +122,7 @@ public class Trigger : MonoBehaviour
         {
             case TargetType.Scene:
                 if (dialogueTextUI)
-                    dialogueTextUI.text = "";
+                    dialogueTextUI.SetText("");
                 mouseScript.MouseCursor(9);
                 SceneManager.LoadScene(targetScene.ToString());
                 break;
@@ -130,7 +133,7 @@ public class Trigger : MonoBehaviour
                     string dt = "";
                     if (dialogueTexts.Length > 0)
                         dt = dialogueTexts[Random.Range(0, dialogueTexts.Length)];
-                    dialogueTextUI.text = dt;
+                    dialogueTextUI.SetText(dt);
                 }
                 break;
 
@@ -140,6 +143,6 @@ public class Trigger : MonoBehaviour
         }
     }
 
-    protected virtual void CustomScript (Trigger trigger) { }
+    public virtual void CustomScript (Trigger trigger) { }
 
 }

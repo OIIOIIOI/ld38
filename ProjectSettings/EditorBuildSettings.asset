@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/TitleScreen.unity
+    guid: ec6114fd9a1f37e4da760ed4304f0522
+  - enabled: 1
     path: Assets/Scenes/Lobby.unity
     guid: 192b7adf9827856408c9f104dd2a19c1
   - enabled: 1
@@ -34,7 +37,7 @@ EditorBuildSettings:
     guid: 5cd04fd404dfdba4aa86414dcfb87088
   - enabled: 1
     path: Assets/Scenes/BlueRoomCompass.unity
-    guid: 00000000000000000000000000000000
+    guid: 475bf53a9d89ffc479ce11453e2670d3
   - enabled: 1
     path: Assets/Scenes/ColumnsRoom.unity
     guid: b2c4c4b6ac5a7a444b69d10f84733c12
@@ -50,3 +53,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/ChapelDetail.unity
     guid: 81b85f047d197eb42b3c129ccdeed1da
+  - enabled: 1
+    path: Assets/Scenes/CreditsScreen.unity
+    guid: 00000000000000000000000000000000

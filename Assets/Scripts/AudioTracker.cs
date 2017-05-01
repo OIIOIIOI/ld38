@@ -104,16 +104,7 @@ public class AudioTracker : MonoBehaviour
         weather03.volume = 1;
 
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-
-
-
-    }
-
+    
     public void SfxBoard(int Sfx)
     {
         SFXnumberint = Sfx;
@@ -159,6 +150,8 @@ public class AudioTracker : MonoBehaviour
         }
         if (SFXnumberint == 2)
         {
+            sfx02.volume = UnityEngine.Random.Range(0.6f, 1f);
+            sfx02.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
             sfx01.Stop();
             sfx02.Play();
             SFXnumberint = 0;

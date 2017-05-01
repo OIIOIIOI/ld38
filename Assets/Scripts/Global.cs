@@ -15,6 +15,9 @@ public class Global : MonoBehaviour
     public int compassRotationB;
     public int compassRotationC;
 
+    public bool firstCandleOn = false;
+    public bool thirdCandleOn = false;
+
     void Awake()
     {
         if (instance == null)
@@ -27,13 +30,19 @@ public class Global : MonoBehaviour
         DontDestroyOnLoad(gameObject);
     }
 
-    public void ValidateClue(string id)
+    public void ValidateClue (string id)
     {
         if (!foundClues.Contains(id))
         {
             foundClues.Add(id);
             Debug.Log(id + " ok, found: " + GetProgress());
             at.PuzzleBoard(GetProgress());
+
+            if (id.Contains("compass"))
+            {
+                if (IsClueValidated("compass1") && IsClueValidated("compass2") && IsClueValidated("compass3"))
+                    at.SfxBoard(9);
+            }
         }
     }
 

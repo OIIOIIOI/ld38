@@ -7,7 +7,10 @@ public class CompassRoom : MonoBehaviour
 
     public int roomMusicIndex;
     public Background background;
-    public GameObject[] spritesToHide;
+
+    public GameObject door;
+    public GameObject[] lockedTriggers;
+    public GameObject openTrigger;
 
     AudioTracker at;
     Global global;
@@ -30,17 +33,23 @@ public class CompassRoom : MonoBehaviour
         if (global.IsClueValidated("compass3"))
             state += 4;
 
+        state = 7;
+
         background.Swap(state, 0f);
 
         if (state == 7)
         {
-            foreach (GameObject go in spritesToHide)
+            foreach (GameObject go in lockedTriggers)
                 go.SetActive(false);
+            openTrigger.SetActive(true);
+            door.SetActive(false);
         }
         else
         {
-            foreach (GameObject go in spritesToHide)
+            foreach (GameObject go in lockedTriggers)
                 go.SetActive(true);
+            openTrigger.SetActive(false);
+            door.SetActive(true);
         }
     }
 

@@ -307,6 +307,7 @@ MonoBehaviour:
   dialogueTexts:
   - Nothing particular in those one.
   - Empty... beside dust anf gravels.
+  customParam: 
 --- !u!1 &980366428
 GameObject:
   m_ObjectHideFlags: 0
@@ -379,6 +380,7 @@ MonoBehaviour:
   dialogueTexts:
   - Too dark... Let's find another way.
   - No way I'm getting in there...
+  customParam: 
 --- !u!1 &1741073610
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +453,7 @@ MonoBehaviour:
   dialogueTexts:
   - It's barely standing.
   - I'd only break my neck climbing it.
+  customParam: 
 --- !u!1 &1746195420
 GameObject:
   m_ObjectHideFlags: 0
@@ -479,7 +482,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5afcc34b0461e4098a77ef4fc82387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomMusicIndex: 0
+  roomMusicIndex: 6
 --- !u!4 &1746195422
 Transform:
   m_ObjectHideFlags: 0
@@ -578,6 +581,7 @@ MonoBehaviour:
   dialogueTexts:
   - There's something in this one.
   - Some kind of device at the bottom.
+  customParam: 
 --- !u!1001 &1801751307
 Prefab:
   m_ObjectHideFlags: 0

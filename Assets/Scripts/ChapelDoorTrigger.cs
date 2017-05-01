@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 public class ChapelDoorTrigger : Trigger
 {
 
-    override protected void CustomScript (Trigger trigger)
+    override public void CustomScript (Trigger trigger)
     {
         if (global.IsClueValidated("compass1") &&
             global.IsClueValidated("compass2") &&

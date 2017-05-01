@@ -472,6 +472,7 @@ MonoBehaviour:
   targetType: 0
   targetScene: 12
   dialogueTexts: []
+  customParam: 
 --- !u!1001 &1274979649
 Prefab:
   m_ObjectHideFlags: 0
@@ -707,6 +708,7 @@ MonoBehaviour:
   targetType: 0
   targetScene: 13
   dialogueTexts: []
+  customParam: 
 --- !u!1001 &1782695237
 Prefab:
   m_ObjectHideFlags: 0
@@ -939,7 +941,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f5afcc34b0461e4098a77ef4fc82387, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  roomMusicIndex: 0
+  roomMusicIndex: 3
 --- !u!4 &2051091910
 Transform:
   m_ObjectHideFlags: 0
