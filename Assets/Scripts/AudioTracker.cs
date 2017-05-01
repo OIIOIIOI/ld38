@@ -114,7 +114,7 @@ public class AudioTracker : MonoBehaviour
 
     public void RoomBoard(int Room)
     {
-        Debug.Log("RoomBoard " + Room);
+        //Debug.Log("RoomBoard " + Room);
         roomnumberint = Room;
         SFXnumberint = 98;
         SoundBoard();
@@ -123,7 +123,7 @@ public class AudioTracker : MonoBehaviour
 
     public void PuzzleBoard(int Puzzle)
     {
-        Debug.Log("PuzzleBoard " + Puzzle);
+        //Debug.Log("PuzzleBoard " + Puzzle);
         puzzlenumberint = Puzzle;
         SFXnumberint = 98;
         SoundBoard();
@@ -150,8 +150,8 @@ public class AudioTracker : MonoBehaviour
         }
         if (SFXnumberint == 2)
         {
-            sfx02.volume = UnityEngine.Random.Range(0.6f, 1f);
-            sfx02.pitch = UnityEngine.Random.Range(0.8f, 1.2f);
+            sfx02.volume = UnityEngine.Random.Range(0.5f, 1f);
+            sfx02.pitch = UnityEngine.Random.Range(0.9f, 1.1f);
             sfx01.Stop();
             sfx02.Play();
             SFXnumberint = 0;

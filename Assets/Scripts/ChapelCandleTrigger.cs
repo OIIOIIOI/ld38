@@ -26,7 +26,7 @@ public class ChapelCandleTrigger : Trigger
         at.SfxBoard(1);
 
         anim.Swap(animIndex, 0.2f);
-        Invoke("NextFrame", 1f);
+        Invoke("NextFrame", 1.5f);
     }
 
     void NextFrame ()

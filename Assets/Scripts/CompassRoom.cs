@@ -32,9 +32,7 @@ public class CompassRoom : MonoBehaviour
             state += 2;
         if (global.IsClueValidated("compass3"))
             state += 4;
-
-        state = 7;
-
+        
         background.Swap(state, 0f);
 
         if (state == 7)

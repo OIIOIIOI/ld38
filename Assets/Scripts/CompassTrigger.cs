@@ -53,9 +53,6 @@ public class CompassTrigger : Trigger
             }
 
             if (rotation == correctRotation)
-                Debug.Log("CORRECT");
-
-            if (rotation == correctRotation)
                 global.ValidateClue("compass" + compass);
             else
                 global.InvalidateClue("compass" + compass);
